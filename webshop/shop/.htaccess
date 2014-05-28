@@ -1,0 +1,11 @@
+RewriteEngine On
+Options +FollowSymlinks
+RewriteCond   %{REQUEST_FILENAME} !-d
+RewriteCond   %{REQUEST_FILENAME} !-f
+
+RewriteRule ^feedback/$ feedback.php [QSA,L]
+RewriteRule ^reg/$ registration.php [QSA,L]
+RewriteRule ^mobile/([0-9]+)-([a-z0-9\-]+)/?$ view_content.php?id=$1 [L]
+
+
+
